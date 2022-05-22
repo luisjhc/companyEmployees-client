@@ -10,8 +10,9 @@
     text-align: center;
 }
 
-.home_container > select{
+.home_container > select {
     margin-top: 1%;
+    cursor: pointer;
 }
 
 .home-submit-btn {

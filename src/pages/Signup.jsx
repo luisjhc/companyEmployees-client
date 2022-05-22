@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./pagesCss/auth.css";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
+import { ReactComponent as Image } from "../images/office.svg";
 
 export default function Signup({ authenticate }) {
   const [form, setForm] = useState({
@@ -42,6 +43,7 @@ export default function Signup({ authenticate }) {
 
   return (
     <div className="auth__form">
+      <Image />
       <h1>Sign Up</h1>
       <form onSubmit={handleFormSubmission} className="auth__form">
         <label htmlFor="input-username">Username</label>
@@ -49,7 +51,7 @@ export default function Signup({ authenticate }) {
           id="input-username"
           type="text"
           name="username"
-          placeholder="Text"
+          placeholder="Username"
           value={username}
           onChange={handleInputChange}
           required

@@ -8,6 +8,12 @@
   margin: 0 auto;
 }
 
+.auth__form > svg {
+  width: 280px;
+  height: 180px;
+  margin-top: 30px;
+}
+
 .auth__form > label, input{
   padding: 0;
   border: none;

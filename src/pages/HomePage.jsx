@@ -49,9 +49,10 @@ function HomePage(props) {
   }
   return (
     <div className="home_container">
+      <h2>Welcome {user.username}</h2>
       <h3>
-        Welcome {user.username}, first of all select how many employees and
-        companies you want to fill the database with.
+        First of all, select how many employees and companies you want to fill
+        the database with.
       </h3>
       <form onSubmit={handleFormSubmission} className="home_container">
         <label htmlFor="number">Number of Employees and Companies: </label>

@@ -5,6 +5,7 @@ import "./Signup";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
 import "./pagesCss/auth.css";
+import { ReactComponent as Image } from "../images/office.svg";
 
 export default function LogIn({ authenticate }) {
   const [form, setForm] = useState({
@@ -39,6 +40,7 @@ export default function LogIn({ authenticate }) {
 
   return (
     <div className="auth__form">
+      <Image />
       <h1>Log In</h1>
       <form onSubmit={handleFormSubmission} className="auth__form">
         <label htmlFor="input-username" className="">
@@ -48,7 +50,7 @@ export default function LogIn({ authenticate }) {
           id="input-username"
           type="text"
           name="username"
-          placeholder="username"
+          placeholder="Username"
           value={username}
           onChange={handleInputChange}
           required

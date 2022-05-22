@@ -2,14 +2,15 @@
 
 ### What you can do with this application:
 
-- Sign up or Log in
-  ![login](/src/images/readMeImages/login.png)
+### - Sign up or Log in
+
+![login](/src/images/readMeImages/login.png)
 
 - Upload employees and companies to the database
 
 ![home](/src/images/readMeImages/home.png)
 
-- Complete list of companies
+### - Complete list of companies
 
 ![manager1](/src/images/readMeImages/manager1.png)
 
@@ -17,15 +18,15 @@
 
 ![manager2](/src/images/readMeImages/manager2.png)
 
-- Complete list of employees
+### - Complete list of employees
 
 ![employees1](/src/images/readMeImages/employees1.png)
 
-- A list with only those employees not assigned to a company
+### - A list with only those employees not assigned to a company
 
 ![employees2](/src/images/readMeImages/employees2.png)
 
-- Assign employees to companies
+### - Assign employees to companies
 
 ### In this page you just need to select the employee and the company, then press the Submit button.
 

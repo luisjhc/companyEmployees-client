@@ -6,7 +6,7 @@
 
 ![login](/src/images/readMeImages/login.png)
 
-- Upload employees and companies to the database
+### - Upload employees and companies to the database
 
 ![home](/src/images/readMeImages/home.png)
 

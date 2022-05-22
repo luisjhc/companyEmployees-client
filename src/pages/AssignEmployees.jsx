@@ -4,15 +4,14 @@ import axios from "axios";
 import * as CONSTS from "../utils/consts";
 import LoadingComponent from "../components/Loading";
 import * as PATHS from "../utils/paths";
-import Companies from "../components/Lists/Companies";
+import EmployeesAndCompanies from "../components/Lists/EmployeesAndCompanies";
 
-const Manager = () => {
+function AssignEmployees() {
   const [isLoading, setIsLoading] = React.useState(false);
-  const [listOfCompanies, setListOfCompanies] = React.useState([]);
-
+  const [employeesNotAssigned, setEmployeesNotAssigned] = React.useState([]);
   React.useEffect(() => {
     axios
-      .get(`${CONSTS.SERVER_URL}/manager`, {
+      .get(`${CONSTS.SERVER_URL}/employees/employeesNotAssigned`, {
         headers: {
           authorization: localStorage.getItem(CONSTS.ACCESS_TOKEN),
         },
@@ -20,7 +19,7 @@ const Manager = () => {
       .then((response) => {
         setIsLoading(false);
         // console.log("response:", response.data);
-        return setListOfCompanies(response.data);
+        return setEmployeesNotAssigned(response.data);
       })
       .catch((err) => {
         console.log("err:", err);
@@ -35,12 +34,12 @@ const Manager = () => {
           <LoadingComponent />
         </div>
       ) : (
-        <Companies listOfCompanies={listOfCompanies} />
+        <EmployeesAndCompanies employeesNotAssigned={employeesNotAssigned} />
       )}
+      <Link to={PATHS.MANAGER}>Show Companies</Link>
       <Link to={PATHS.EMPLOYEES}>Show Employees</Link>
-      <Link to={PATHS.ASSIGNEMPLOYEES}>Assign Employees</Link>
     </div>
   );
-};
+}
 
-export default Manager;
+export default AssignEmployees;

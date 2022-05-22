@@ -47,7 +47,6 @@ function HomePage(props) {
   function handleButton() {
     setIsLoading(true);
   }
-
   return (
     <div className="App">
       <h3>

@@ -5,6 +5,7 @@ import * as CONSTS from "../utils/consts";
 import LoadingComponent from "../components/Loading";
 import * as PATHS from "../utils/paths";
 import EmployeesAndCompanies from "../components/Lists/EmployeesAndCompanies";
+import "./pagesCss/assignEmployees.css";
 
 function AssignEmployees() {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -36,8 +37,14 @@ function AssignEmployees() {
       ) : (
         <EmployeesAndCompanies employeesNotAssigned={employeesNotAssigned} />
       )}
-      <Link to={PATHS.MANAGER}>Show Companies</Link>
-      <Link to={PATHS.EMPLOYEES}>Show Employees</Link>
+      <div className="links">
+        <Link to={PATHS.MANAGER} className="linkA">
+          Show Companies
+        </Link>
+        <Link to={PATHS.EMPLOYEES} className="linkB">
+          Show Employees
+        </Link>
+      </div>
     </div>
   );
 }

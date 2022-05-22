@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { signup } from "../services/auth";
 import { useNavigate } from "react-router-dom";
-import "./auth.css";
+import "./pagesCss/auth.css";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
 
@@ -41,7 +41,7 @@ export default function Signup({ authenticate }) {
   }
 
   return (
-    <div>
+    <div className="auth__form">
       <h1>Sign Up</h1>
       <form onSubmit={handleFormSubmission} className="auth__form">
         <label htmlFor="input-username">Username</label>
@@ -73,8 +73,7 @@ export default function Signup({ authenticate }) {
             <p>{error.message}</p>
           </div>
         )}
-
-        <button className="button__submit" type="submit">
+        <button className="login-submit-btn" type="submit">
           Submit
         </button>
       </form>

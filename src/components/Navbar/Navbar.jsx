@@ -7,7 +7,7 @@ const Navbar = (props) => {
   return (
     <nav>
       <Link to={PATHS.HOMEPAGE} className="nav__projectName">
-        Company-Employees App
+        Home
       </Link>
 
       <div className="nav__authLinks">

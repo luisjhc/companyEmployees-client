@@ -4,6 +4,7 @@ import axios from "axios";
 import * as CONSTS from "../utils/consts";
 import LoadingComponent from "../components/Loading";
 import * as PATHS from "../utils/paths";
+import "./pagesCss/employees.css";
 
 function Employees() {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -60,16 +61,21 @@ function Employees() {
           <LoadingComponent />
         </div>
       ) : (
-        <>
+        <div className="employees_container">
           <h2>Complete List of Employees</h2>
-          <button onClick={() => employeesNotAssigned()}>
+          <button
+            onClick={() => employeesNotAssigned()}
+            className="employees_btnA"
+          >
             Show only unassigned employees
           </button>
-          <button onClick={() => allEmployees()}>Show all employees</button>
+          <button onClick={() => allEmployees()} className="employees_btnB">
+            Show all employees
+          </button>
           {checked
             ? listOfFilteredEmployees.map((employee) => (
                 <div key={employee._id}>
-                  <ul>
+                  <ul className="employees_ul">
                     <li>
                       <h3>
                         {employee.first_name} {employee.last_name}
@@ -85,7 +91,7 @@ function Employees() {
               ))
             : listOfEmployees.map((employee) => (
                 <div key={employee._id}>
-                  <ul>
+                  <ul className="employees_ul">
                     <li>
                       <h3>
                         {employee.first_name} {employee.last_name}
@@ -99,10 +105,16 @@ function Employees() {
                   </ul>
                 </div>
               ))}
-        </>
+        </div>
       )}
-      <Link to={PATHS.MANAGER}>Show Companies</Link>
-      <Link to={PATHS.ASSIGNEMPLOYEES}>Assign Employees</Link>
+      <div className="links">
+        <Link to={PATHS.MANAGER} className="linkA">
+          Show Companies
+        </Link>
+        <Link to={PATHS.ASSIGNEMPLOYEES} className="linkB">
+          Assign Employees
+        </Link>
+      </div>
     </div>
   );
 }

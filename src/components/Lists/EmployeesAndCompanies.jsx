@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import * as CONSTS from "../../utils/consts";
 import LoadingComponent from "../../components/Loading";
+import "./employeesAndCompanies.css";
 
 function EmployeesAndCompanies({ employeesNotAssigned }) {
   const [form, setForm] = React.useState({
@@ -67,19 +68,19 @@ function EmployeesAndCompanies({ employeesNotAssigned }) {
           <LoadingComponent />
         </div>
       ) : (
-        <>
+        <div className="employeesAndCompanies_container">
           <h2>List of employees that can be assigned</h2>
           <p>
             Please click on the name of the employee and the company to be
             assigned, then press Submit
           </p>
           {employeesNotAssigned.map((employee) => (
-            <div key={employee._id}>
-              <ul>
+            <div key={employee._id} className="employeesAndCompanies_employees">
+              <ul className="employeesAndCompanies_ul">
                 <li>
-                  <h3>
+                  <h2>
                     {employee.first_name} {employee.last_name}
-                  </h3>
+                  </h2>
                 </li>
                 <li>Email: {employee.email}</li>
                 <li>Date of Birth: {employee.date_of_birth}</li>
@@ -94,6 +95,7 @@ function EmployeesAndCompanies({ employeesNotAssigned }) {
                       type="radio"
                       value={employee.first_name}
                       onChange={handleInputChange}
+                      className="employeesAndCompanies_input"
                     />
                   </li>
                   <p>Companies:</p>
@@ -107,16 +109,22 @@ function EmployeesAndCompanies({ employeesNotAssigned }) {
                           type="radio"
                           value={company.business_name}
                           onChange={handleInputChange}
+                          className="employeesAndCompanies_input"
                         />
                       </li>
                     </div>
                   ))}
-                  <button type="submit">Submit</button>
+                  <button
+                    type="submit"
+                    className="employeesAndCompanies_submit"
+                  >
+                    Submit
+                  </button>
                 </form>
               </ul>
             </div>
           ))}
-        </>
+        </div>
       )}
     </>
   );

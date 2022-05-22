@@ -2,8 +2,8 @@ import React from "react";
 import axios from "axios";
 import * as CONSTS from "../utils/consts";
 import LoadingComponent from "../components/Loading";
-
-import "../App.css";
+import "./pagesCss/homePage.css";
+// import "../App.css";
 
 function HomePage(props) {
   const { user } = props;
@@ -48,19 +48,20 @@ function HomePage(props) {
     setIsLoading(true);
   }
   return (
-    <div className="App">
+    <div className="home_container">
       <h3>
         Welcome {user.username}, first of all select how many employees and
         companies you want to fill the database with.
       </h3>
-      <form onSubmit={handleFormSubmission} className="number">
-        <label htmlFor="number">Number of Employees and Companies</label>
+      <form onSubmit={handleFormSubmission} className="home_container">
+        <label htmlFor="number">Number of Employees and Companies: </label>
         <select id="number" name="number" onChange={handleInputChange}>
           <option value="5">5</option>
           <option value="10">10</option>
         </select>
+
         <button
-          className="numberOfEmployeesAndCompanies-btn"
+          className="home-submit-btn"
           type="submit"
           onClick={handleButton}
         >

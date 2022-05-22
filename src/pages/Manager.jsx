@@ -4,7 +4,7 @@ import axios from "axios";
 import * as CONSTS from "../utils/consts";
 import LoadingComponent from "../components/Loading";
 import * as PATHS from "../utils/paths";
-import Companies from "../components/Lists/Companies";
+import "./pagesCss/manager.css";
 
 const Manager = () => {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -35,10 +35,32 @@ const Manager = () => {
           <LoadingComponent />
         </div>
       ) : (
-        <Companies listOfCompanies={listOfCompanies} />
+        <div className="manager_container">
+          <h2>Complete List of Companies</h2>
+          {listOfCompanies.map((company) => (
+            <div key={company._id}>
+              <ul className="manager_ul">
+                <li>
+                  <h3>{company.business_name}</h3>
+                  <ul>
+                    <li>Industry: {company.industry}</li>
+                    <li>Type: {company.type}</li>
+                    <li>Employee: {company.employee}</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          ))}
+        </div>
       )}
-      <Link to={PATHS.EMPLOYEES}>Show Employees</Link>
-      <Link to={PATHS.ASSIGNEMPLOYEES}>Assign Employees</Link>
+      <div className="links">
+        <Link to={PATHS.EMPLOYEES} className="linkA">
+          Show Employees
+        </Link>
+        <Link to={PATHS.ASSIGNEMPLOYEES} className="linkB">
+          Assign Employees
+        </Link>
+      </div>
     </div>
   );
 };

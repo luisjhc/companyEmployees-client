@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./Signup";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
+import "./pagesCss/auth.css";
 
 export default function LogIn({ authenticate }) {
   const [form, setForm] = useState({
@@ -37,10 +38,12 @@ export default function LogIn({ authenticate }) {
   }
 
   return (
-    <div>
+    <div className="auth__form">
       <h1>Log In</h1>
-      <form onSubmit={handleFormSubmission} className="signup__form">
-        <label htmlFor="input-username">Username</label>
+      <form onSubmit={handleFormSubmission} className="auth__form">
+        <label htmlFor="input-username" className="">
+          Username
+        </label>
         <input
           id="input-username"
           type="text"
@@ -70,7 +73,7 @@ export default function LogIn({ authenticate }) {
           </div>
         )}
 
-        <button className="button__submit" type="submit">
+        <button className="login-submit-btn" type="submit">
           Submit
         </button>
       </form>

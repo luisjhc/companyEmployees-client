@@ -1,0 +1,49 @@
+.employeesAndCompanies_container{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    /* width:100vw; */
+    max-width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.employeesAndCompanies_container ul, li{
+    font-family: "Times New Roman";
+    letter-spacing: 2px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.employeesAndCompanies_container li{
+    padding-bottom: 5px;
+}
+
+.employeesAndCompanies_employees{
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: #66d6ea;
+    box-shadow: 10px 10px 15px #47919e;
+    margin: 10px;
+}
+
+.employeesAndCompanies_input {
+    cursor: pointer;
+}
+
+.employeesAndCompanies_submit{
+    margin: 5px;
+    color: #210440;
+    background-color: #ffba00;
+    padding: 2px 10px 3px 10px;
+    border: 1px solid #050505;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.employeesAndCompanies_submit:hover{
+    transform: scale(1.1);
+}

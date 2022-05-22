@@ -16,6 +16,7 @@ nav {
   color: #61dafb;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
+  margin-right: 15px;
 }
 
 .authLink + .authLink {

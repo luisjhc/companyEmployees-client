@@ -1,0 +1,36 @@
+.home_container{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    /* width:100vw; */
+    max-width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home_container > select{
+    margin-top: 1%;
+}
+
+.home-submit-btn {
+    background: #ffba00;
+    height: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+    width: 45%;
+    margin: 3rem;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 1.1em;
+  }
+  
+.home-submit-btn:hover {
+    box-shadow: none;
+}

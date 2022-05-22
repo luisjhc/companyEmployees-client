@@ -62,7 +62,11 @@ function Employees() {
         </div>
       ) : (
         <div className="employees_container">
-          <h2>Complete List of Employees</h2>
+          {checked ? (
+            <h2>Employees not yet assigned</h2>
+          ) : (
+            <h2>Complete List of Employees</h2>
+          )}
           <button
             onClick={() => employeesNotAssigned()}
             className="employees_btnA"

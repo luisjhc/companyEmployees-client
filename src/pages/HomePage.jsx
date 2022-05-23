@@ -47,6 +47,7 @@ function HomePage(props) {
   function handleButton() {
     setIsLoading(true);
   }
+
   return (
     <div className="home_container">
       <h2>Welcome {user.username}</h2>

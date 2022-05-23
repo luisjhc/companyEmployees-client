@@ -8,10 +8,13 @@ import "./pagesCss/employees.css";
 
 function Employees() {
   const [isLoading, setIsLoading] = React.useState(false);
+  // Hook with the list of all the employees
   const [listOfEmployees, setListOfEmployees] = React.useState([]);
+  // Hook with the list of the employees not yet assigned
   const [listOfFilteredEmployees, setListOfFilteredEmployees] = React.useState(
     []
   );
+  // Hook to check if the buttons "Show only unassigned employees" or "Show all employees" are clicked
   const [checked, setChecked] = React.useState(false);
 
   React.useEffect(() => {
@@ -31,6 +34,7 @@ function Employees() {
       });
   }, []);
 
+  // Function triggered when the button "Show only unassigned employees" is clicked
   function employeesNotAssigned() {
     setChecked(true);
     axios

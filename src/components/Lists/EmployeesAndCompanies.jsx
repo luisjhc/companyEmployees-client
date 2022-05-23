@@ -12,7 +12,6 @@ function EmployeesAndCompanies({ employeesNotAssigned }) {
   const { employee, company } = form;
 
   const [isLoading, setIsLoading] = React.useState(false);
-  // const [success, setSuccess] = useState("");
   const [companiesWithNoEmployees, setcompaniesWithNoEmployees] =
     React.useState([]);
 

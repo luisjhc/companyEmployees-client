@@ -9,7 +9,9 @@ import "./pagesCss/assignEmployees.css";
 
 function AssignEmployees() {
   const [isLoading, setIsLoading] = React.useState(false);
+  // The list with the employees not assigned will be sent to the EmployeesAndCompanies component
   const [employeesNotAssigned, setEmployeesNotAssigned] = React.useState([]);
+
   React.useEffect(() => {
     axios
       .get(`${CONSTS.SERVER_URL}/employees/employeesNotAssigned`, {

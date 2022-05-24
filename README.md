@@ -36,6 +36,8 @@
 
 #### **[Link to the back-end repo](https://github.com/luisjhc/companyEmployees-server)**
 
+### Additionally I've been working in a docker compose for this project. You can check it out following this **[Link](https://github.com/luisjhc/Company_Employees-dockerCompose)**
+
 #### Technologies Used:
 
 - JavaScript
